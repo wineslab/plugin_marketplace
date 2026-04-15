@@ -1,0 +1,28 @@
+{
+  "name": "wineslab",
+  "owner": {
+    "name": "WinesLab",
+    "email": "aghayev.t@northeastern.edu"
+  },
+  "metadata": {
+    "description": "Official Claude Code plugin marketplace for the WinesLab / Open6G lab at Northeastern University."
+  },
+  "plugins": [
+    {
+      "name": "genesis-testrunner",
+      "source": {
+        "source": "github",
+        "repo": "wineslab/genesis_testbed",
+        "ref": "plugin"
+      },
+      "description": "Agents and skills for GENESIS 5G testbed automation. Orchestrates OAI gNB experiments across Arena/X5G and LCHEM.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Tamerlan Aghayev",
+        "email": "aghayev.t@northeastern.edu"
+      },
+      "homepage": "https://github.com/wineslab/genesis_testbed",
+      "keywords": ["5g", "testbed", "oai", "arena", "x5g", "lchem", "open6g"]
+    }
+  ]
+}
