@@ -11,8 +11,8 @@
     {
       "name": "genesis-testrunner",
       "source": {
-        "source": "github",
-        "repo": "wineslab/genesis_testbed",
+        "source": "url",
+        "url": "https://github.com/wineslab/genesis_testbed.git",
         "ref": "plugin"
       },
       "description": "Agents and skills for GENESIS 5G testbed automation. Orchestrates OAI gNB experiments across Arena/X5G and LCHEM.",
