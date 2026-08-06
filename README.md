@@ -6,7 +6,7 @@ Official Claude Code plugin marketplace for the [WinesLab / Open6G lab](https://
 
 | Plugin | Description | Repo |
 |--------|-------------|------|
-| `genesis-testrunner` | Agents and skills for GENESIS 5G testbed automation (Arena/X5G, LCHEM) | [wineslab/genesis_testbed](https://github.com/wineslab/genesis_testbed/tree/plugin) |
+| `genesis` | Stage agents, domain specialists and skills for the AI-RAN life-cycle: OAI gNB, Foxconn RUs, Sierra/soft UEs, OpenShift, RIC xApps, across Arena/X5G and LCHEM | [wineslab/genesis](https://github.com/wineslab/genesis) |
 
 ## Install
 
@@ -19,16 +19,19 @@ Official Claude Code plugin marketplace for the [WinesLab / Open6G lab](https://
 ### 2. Install a plugin
 
 ```
-/plugin install genesis-testrunner@wineslab
+/plugin install genesis@wineslab
 ```
 
-Skills are then available as `/genesis-testrunner:<skill>` and agents appear under `genesis-testrunner:` in `/agents`.
+Skills are then available as `/genesis:<skill>` and agents appear under `genesis:` in `/agents`.
+
+> `wineslab/genesis` is a **private** repository — installing requires access to it,
+> and Claude Code clones with your own git credentials.
 
 ### CLI alternative
 
 ```bash
 claude plugin marketplace add wineslab/plugin_marketplace
-claude plugin install genesis-testrunner@wineslab
+claude plugin install genesis@wineslab
 ```
 
 ## Update
@@ -41,7 +44,8 @@ To pull the latest plugin versions:
 
 ## Adding a New Plugin
 
-1. Build the plugin in its own repo following the [Claude Code plugin docs](https://code.claude.com/docs/en/plugins)
+1. Build the plugin in its own repo following the [Claude Code plugin docs](https://code.claude.com/docs/en/plugins).
+   Add `.claude-plugin/plugin.json` and check it with `claude plugin validate .`
 2. Open a PR to this repo adding an entry to `.claude-plugin/marketplace.json`:
 
 ```json
@@ -49,11 +53,9 @@ To pull the latest plugin versions:
   "name": "your-plugin-name",
   "source": {
     "source": "github",
-    "repo": "wineslab/your-repo",
-    "ref": "plugin"
+    "repo": "wineslab/your-repo"
   },
   "description": "What your plugin does",
-  "version": "1.0.0",
   "author": { "name": "Your Name", "email": "you@northeastern.edu" }
 }
 ```

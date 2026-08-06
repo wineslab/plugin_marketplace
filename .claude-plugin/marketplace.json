@@ -9,20 +9,36 @@
   },
   "plugins": [
     {
-      "name": "genesis-testrunner",
+      "name": "genesis",
+      "displayName": "GENESIS",
       "source": {
-        "source": "url",
-        "url": "https://github.com/wineslab/genesis_testbed.git",
-        "ref": "plugin"
+        "source": "github",
+        "repo": "wineslab/genesis"
       },
-      "description": "Agents and skills for GENESIS 5G testbed automation. Orchestrates OAI gNB experiments across Arena/X5G and LCHEM.",
-      "version": "1.0.0",
+      "description": "Agentic framework for the AI-RAN life-cycle of 5G/6G networks. Stage agents and domain specialists (OAI gNB, Foxconn RUs, Sierra/soft UEs, OpenShift, RIC xApps) plus atomic skills for running experiments across the Arena/X5G and LCHEM testbeds.",
       "author": {
         "name": "Tamerlan Aghayev",
         "email": "aghayev.t@northeastern.edu"
       },
-      "homepage": "https://github.com/wineslab/genesis_testbed",
-      "keywords": ["5g", "testbed", "oai", "arena", "x5g", "lchem", "open6g"]
+      "homepage": "https://github.com/wineslab/genesis",
+      "repository": "https://github.com/wineslab/genesis",
+      "license": "MIT",
+      "keywords": [
+        "5g",
+        "6g",
+        "ai-ran",
+        "o-ran",
+        "testbed",
+        "oai",
+        "openairinterface",
+        "arena",
+        "x5g",
+        "lchem",
+        "open6g",
+        "kpm",
+        "ric",
+        "xapp"
+      ]
     }
   ]
 }
